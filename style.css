@@ -1,6 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer components {
+  .card {
+    @apply border border-secondary rounded-xl;
+  }
+  .btn-disabled {
+    pointer-event: none;
+    cursor: not-allowed;
+    background-color: #888;
+    color: #fff;
+  }
+}
+@layer utilities {
+  .transition-300 {
+    transition: all 0.3s ease-in-out;
+  }
+  .transition-200 {
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -1,14 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <h1>Hello World</h1>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <header class="header container grid grid-cols-4 gap-4 mx-auto">
+    <article class="card col-span-2">
+      <select>
+        <option value="0">
+          Russian
+        </option>
+      </select>
+      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">Submit</button>
+    </article>
+    <article class="card">
+      <select>
+        <option value="0">
+          Russian
+        </option>
+      </select>
+      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">Submit</button>
+    </article>
+    <article class="card">
+      <select>
+        <option value="0">
+          Russian
+        </option>
+      </select>
+      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">Submit</button>
+    </article>
+   
+  </header>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
