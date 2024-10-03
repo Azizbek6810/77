@@ -1,48 +1,1100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/icomoon/style.css" />
+    <title>Vite App</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/icomoon/style.css">
-  <title>Vite App</title>
-</head>
+  <body class="bg-grey">
+    <header class="bg-white">
+      <div
+        class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative"
+      >
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-1 cursor-pointer">
+            <img
+              src="/public/images/icons/ru.svg"
+              alt="ru-flag"
+              class="h-fit"
+            />
+            <span
+              class="hidden sm:inline-block text-black font-medium text-[18px] leading-3"
+              >Russian</span
+            >
+            <span class="inline-block sm:hidden">РУ</span>
+            <i class="icon-down text-2xl leading-6"></i>
+          </div>
+          <div class="flex items-center gap-1">
+            <i class="icon-phone text-[#B8BBBD] text-xl leading-5"></i>
+            <a
+              href="tel: +998 88 500 50 00"
+              class="text-sm leading-4 font-medium"
+              >+998 88 500 50 00</a
+            >
+          </div>
+        </div>
+        <img
+          src="/images/icons/logo-77.svg"
+          alt="logo-77"
+          class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow"
+        />
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
+            <span class="text-sm leading-5 font-semibold text-black"
+              >Избранные</span
+            >
+          </div>
+          <button
+            class="flex items-center gap-2 px-6 py-2.5 bg-[#EAEDF0] rounded-lg"
+          >
+            <span class="text-sm leading-5 font-semibold text-black"
+              >Войти</span
+            >
+            <i class="icon-login text-black text-xl leading-5"></i>
+          </button>
+        </div>
+      </div>
+    </header>
 
-<body>
-  <header class="header container grid grid-cols-4 gap-4 mx-auto">
-    <article class="card col-span-2">
-      <select>
-        <option value="0">
-          Russian
-        </option>
-      </select>
-      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">Submit</button>
-    </article>
-    <article class="card">
-      <select>
-        <option value="0">
-          Russian
-        </option>
-      </select>
-      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">Submit</button>
-    </article>
-    <article class="card">
-      <select>
-        <option value="0">
-          Russian
-        </option>
-      </select>
-      <button class="transition-300 text-white-100 bg-red-700 p-2 m-2 hover:btn-disabled text-xl rounded">
-        <span>Submit</span>
-      </button>
-    </article>
-    <i class="icon-down text-6xl hover:cursor-pointer text-red-600"></i>
-   
-   
-  </header>
-  <script type="module" src="/main.js"></script>
-</body>
+    <main>
+      <section
+        class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]"
+      >
+        <div class="container mx-auto max-w-[1184px] justify-center relative">
+          <form
+            class="w-[580px] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between"
+          >
+            <div class="flex items-center gap-2 grow">
+              <i class="icon-search text-[#D5D8DB]"></i>
+              <input
+                type="text"
+                placeholder="Что вы ищите?"
+                class="px-2.5 py-4 text-base leading-5 outline-none w-full"
+              />
+            </div>
+            <button
+              class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5"
+            >
+              Поиск
+            </button>
+          </form>
+          <h2
+            class="text-3xl text-center font-bold leading-130 text-black my-2"
+          >
+            Категории
+          </h2>
+          <p
+            class="text-base font-light text-center text-[#8E9297] leading-normal mb-10"
+          >
+            Вы можете найти все категории, которые вам нужны от покупателя
+          </p>
+          <div class="grid grid-cols-3 gap-x-[72px] gap-y-5 mb-6">
+            <!-- grid-item-1 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-girl transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Для женщин
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >4 147 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
 
+            <!-- grid-item-2 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-beauty transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Красота
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >574 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-3 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-fridge transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Бытовая техника
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >574 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-4 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-boy transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Для мужчин
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >574 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-5 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-heart-puls transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Здоровье
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >684 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-6 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-pc-phone transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Электроника
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >4147 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-7 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-carriage transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Детские товары
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >635 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-8 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-jewelry transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Украшения и бижутерия
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >4147 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-9 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-blender transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Домашняя утварь
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >322 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-10 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-sneakers transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Обувь
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >342 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-11 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-pencil transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Канцелярия
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >101 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-12 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-umbrella transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Спорт и отдых
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >741 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-13 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-spanner transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Автотовары
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >545 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-14 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-car transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Новые легковые автомобили
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >5435 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-15 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-motocycle transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Мототранспорт
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >222 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-16 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-sapling transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Дача, сады и огороды
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >787 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-17 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-cleaning transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Личная гигиена
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >990 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-18 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-woman-bag transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Аксессуарлар
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >574 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-19 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-sneakers transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Бытовая химия и личная гигиена
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >105 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-20 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-worker transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Строительство и ремонт
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >478 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+
+            <!-- grid-item-21 -->
+            <div
+              class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
+            >
+              <i
+                class="icon-backpack transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
+              ></i>
+              <div class="flex flex-col">
+                <p class="text-black text-base font-semibold leading-normal">
+                  Сумки и чемоданы
+                </p>
+                <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                  >300 объявлений</span
+                >
+              </div>
+              <i
+                class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="adds container w-[1184px] mx-auto">
+        <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
+          Объявления
+        </h2>
+        <p
+          class="text-base font-light text-center text-[#8E9297] leading-normal mb-10"
+        >
+          Вы можете найти все категории, которые вам нужны от покупателя
+        </p>
+        <div class="grid grid-cols-4 gap-6 mb-10">
+          <!-- card-1 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              src="/images/home/cap-1.webp"
+              alt="cap"
+              class="rounded-t-xl w-full"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Кепки Corneliani Diamond for him edition.
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >2 599 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-2 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/malibu.webp"
+              alt="car"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Самарканд
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Chevrolet Onix 1.2 Turbo в наличии
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >204 000 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-3 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/cap-2.webp"
+              alt="cap"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                7Saber Trucker Cap
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >280 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-4 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/sneakers-1.webp"
+              alt="sneakers"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Оригинальные кроссовки Nike Air Max Plus
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >4 820 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-5 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/sneakers-2.webp"
+              alt="sneakers"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Оригинальные кроссовки Nike Air Max 97
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >4 820 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-6 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/iwatch.webp"
+              alt="iwatch"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Apple Watch Series 8 - USA Non active
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >4 500 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-7 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/jeep.webp"
+              alt="car"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Самарканд
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Лучший кроссовер Geely Monjaro Limited Edition
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >320 000 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-8 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/beauty.webp"
+              alt="beauty"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Стайлер для волос Dyson airwrap complete long
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >500
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-9 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/cap-2.webp"
+              alt="cap"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                7Saber Trucker Cap
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >280 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-10 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/sneakers-1.webp"
+              alt="sneakers"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Оригинальные кроссовки Nike Air Max Plus
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >4 820 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-11 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/malibu.webp"
+              alt="car"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Chevrolet Onix 1.2 Turbo в наличии
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >204 000 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+
+          <!-- card-12 -->
+          <article
+            class="card border-none shadow-4xl relative group cursor-pointer"
+          >
+            <img
+              class="rounded-t-xl w-full"
+              src="/images/home/cap-1.webp"
+              alt="cap"
+            />
+            <div
+              class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
+            >
+              <p
+                class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
+              >
+                г. Ташкент
+              </p>
+              <h3
+                class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
+              >
+                Кепки Corneliani Diamond for him edition.
+              </h3>
+              <span class="text-[#8E9297] font-normal leading-130 text-sm"
+                >Вчера, 19:20</span
+              >
+              <a
+                href="tel:+998 71 200 70 07"
+                class="text-[#8E9297] font-semibold leading-130 text-base"
+                >+998 71 200 70 07</a
+              >
+              <b class="text-black font-bold text-2xl leading-130"
+                >2 599 000
+                <span class="text-[#388FF3] leading-4 text-base font-normal"
+                  >UZS</span
+                ></b
+              >
+            </div>
+            <i
+              class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+            ></i>
+          </article>
+        </div>
+        <button
+          class="px-7 py-[11px] border-2 rounded-[100px] bg-[#EAEDF0] flex items-center justify-center gap-x-2 mx-auto"
+        >
+          <span class="text-base leading-130 text-black font-semibold"
+            >Загрузить больше</span
+          >
+          <i class="icon-double-down text-lg leading-5 font-bold"></i>
+        </button>
+      </section>
+      <footer class="mt-[72px] bg-white">
+        <div
+          class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16"
+        >
+          <img
+            src="/public/images/icons/logo-77.svg"
+            alt="logo"
+            class="w-fit absolute -top-10 inset-x-auto drop-shadow"
+          />
+          <p
+            class="text-base leading-130 font-normal text-center max-w-[669px] mb-6"
+          >
+            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+            облегчает покупки и продажи, связывая продавцов с потенциальными
+            клиентами.
+          </p>
+          <div class="flex items-center mb-12 gap-x-[72px]">
+            <div class="flex-item flex items-center gap-x-1">
+              <img src="/public/images/icons/symbol.svg" alt="symbol" />
+              <h3
+                class="text-lg font-semibold text-black leading-130 text-center"
+              >
+                Доска объявлений
+              </h3>
+            </div>
+            <div class="flex-item flex items-center gap-x-1">
+              <img src="/public/images/icons/symbol.svg" alt="symbol" />
+              <h3
+                class="text-lg font-semibold text-black leading-130 text-center"
+              >
+                Условия пользования
+              </h3>
+            </div>
+            <div class="flex-item flex items-center gap-x-1">
+              <img src="/public/images/icons/symbol.svg" alt="symbol" />
+              <h3
+                class="text-lg font-semibold text-black leading-130 text-center"
+              >
+                <a href="tel: +998 88 500 50 00">+998 88 500 50 00</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="w-full border-t-2">
+          <div
+            class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto"
+          >
+            <p>© <a href="https://77.uz">77.uz</a> 2023. Все права защищены</p>
+            <div class="flex gap-x-2">
+              <i class="icon-uic"></i>
+              <img src="/public/images/icons/uic-group.svg" alt="logo" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
