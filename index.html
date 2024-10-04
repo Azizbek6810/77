@@ -12,7 +12,7 @@
   <body class="bg-grey">
     <header class="bg-white">
       <div
-        class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative"
+        class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]"
       >
         <div class="flex items-center gap-6">
           <div class="flex items-center gap-1 cursor-pointer">
@@ -22,17 +22,19 @@
               class="h-fit"
             />
             <span
-              class="hidden sm:inline-block text-black font-medium text-[18px] leading-3"
+              class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3"
               >Russian</span
             >
-            <span class="inline-block sm:hidden">РУ</span>
+            <span class="max-md:inline-block hidden">РУ</span>
             <i class="icon-down text-2xl leading-6"></i>
           </div>
           <div class="flex items-center gap-1">
-            <i class="icon-phone text-[#B8BBBD] text-xl leading-5"></i>
+            <i
+              class="icon-phone text-[#B8BBBD] text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-[#B8BBBD] max-lg:p-2 max-lg:rounded-[50%]"
+            ></i>
             <a
               href="tel: +998 88 500 50 00"
-              class="text-sm leading-4 font-medium"
+              class="text-sm leading-4 font-medium max-lg:hidden"
               >+998 88 500 50 00</a
             >
           </div>
@@ -40,19 +42,21 @@
         <img
           src="/images/icons/logo-77.svg"
           alt="logo-77"
-          class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow"
+          class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow max-lg:inset-x-[40%] max-sm:max-w-[120px]"
         />
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-2 cursor-pointer">
             <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
-            <span class="text-sm leading-5 font-semibold text-black"
+            <span
+              class="text-sm leading-5 font-semibold text-black max-lg:hidden"
               >Избранные</span
             >
           </div>
           <button
             class="flex items-center gap-2 px-6 py-2.5 bg-[#EAEDF0] rounded-lg"
           >
-            <span class="text-sm leading-5 font-semibold text-black"
+            <span
+              class="text-sm leading-5 font-semibold text-black max-md:hidden"
               >Войти</span
             >
             <i class="icon-login text-black text-xl leading-5"></i>
@@ -67,7 +71,7 @@
       >
         <div class="container mx-auto max-w-[1184px] justify-center relative">
           <form
-            class="w-[580px] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between"
+            class="w-auto max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between"
           >
             <div class="flex items-center gap-2 grow">
               <i class="icon-search text-[#D5D8DB]"></i>
@@ -93,7 +97,9 @@
           >
             Вы можете найти все категории, которые вам нужны от покупателя
           </p>
-          <div class="grid grid-cols-3 gap-x-[72px] gap-y-5 mb-6">
+          <div
+            class="grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1"
+          >
             <!-- grid-item-1 -->
             <div
               class="grid-item transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-11 py-5 pr-3 cursor-pointer group hover:border hover:border-[#388FF3]"
@@ -516,7 +522,7 @@
           </div>
         </div>
       </section>
-      <section class="adds container w-[1184px] mx-auto">
+      <section class="adds container w-[1184px] mx-auto max-md:w-auto">
         <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
           Объявления
         </h2>
@@ -525,10 +531,12 @@
         >
           Вы можете найти все категории, которые вам нужны от покупателя
         </p>
-        <div class="grid grid-cols-4 gap-6 mb-10">
+        <div
+          class="grid grid-cols-4 gap-6 mb-10 max-xl:grid-cols-3 max-xl:px-[30px] max-lg:grid-cols-2 max-md:gap-x-5 max-md:gap-y-2 max-sm:grid-cols-1"
+        >
           <!-- card-1 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               src="/images/home/cap-1.webp"
@@ -570,7 +578,7 @@
 
           <!-- card-2 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -612,7 +620,7 @@
 
           <!-- card-3 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -654,7 +662,7 @@
 
           <!-- card-4 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -696,7 +704,7 @@
 
           <!-- card-5 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -738,7 +746,7 @@
 
           <!-- card-6 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -780,7 +788,7 @@
 
           <!-- card-7 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -822,7 +830,7 @@
 
           <!-- card-8 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -864,7 +872,7 @@
 
           <!-- card-9 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -906,7 +914,7 @@
 
           <!-- card-10 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -948,7 +956,7 @@
 
           <!-- card-11 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -990,7 +998,7 @@
 
           <!-- card-12 -->
           <article
-            class="card border-none shadow-4xl relative group cursor-pointer"
+            class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
           >
             <img
               class="rounded-t-xl w-full"
@@ -1041,7 +1049,7 @@
       </section>
       <footer class="mt-[72px] bg-white">
         <div
-          class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16"
+          class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16 max-xl:px-[30px]"
         >
           <img
             src="/public/images/icons/logo-77.svg"
@@ -1055,7 +1063,9 @@
             облегчает покупки и продажи, связывая продавцов с потенциальными
             клиентами.
           </p>
-          <div class="flex items-center mb-12 gap-x-[72px]">
+          <div
+            class="flex items-center mb-12 gap-x-[72px] max-md:gap-5 flex-wrap justify-center"
+          >
             <div class="flex-item flex items-center gap-x-1">
               <img src="/public/images/icons/symbol.svg" alt="symbol" />
               <h3
@@ -1082,7 +1092,7 @@
             </div>
           </div>
         </div>
-        <div class="w-full border-t-2">
+        <div class="w-full border-t-2 max-xl:px-[30px]">
           <div
             class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto"
           >
