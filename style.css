@@ -34,4 +34,9 @@
   .drop-shadow {
     filter: drop-shadow(0px 8.828px 35.31px rgba(56, 143, 243, 0.44));
   }
+  
+}
+.list-hidden {
+  opacity: 0;
+  visibility: hidden;
 }

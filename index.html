@@ -15,18 +15,24 @@
         class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]"
       >
         <div class="flex items-center gap-6">
-          <div class="flex items-center gap-1 cursor-pointer">
-            <img
-              src="/public/images/icons/ru.svg"
-              alt="ru-flag"
-              class="h-fit"
-            />
-            <span
-              class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3"
-              >Russian</span
-            >
-            <span class="max-md:inline-block hidden">РУ</span>
-            <i class="icon-down text-2xl leading-6"></i>
+          <div>
+            <button class="language-btn flex items-center gap-1 cursor-pointer">
+              <img
+                src="/public/images/icons/ru.svg"
+                alt="language flag"
+                class="h-fit"
+              />
+              <span
+                class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3"
+                >Russian</span
+              >
+              <span class="max-md:inline-block hidden">РУ</span>
+              <i class="icon-down text-2xl leading-6"></i>
+            </button>
+            <ul class="language-list rounded-lg shadow-category pl-4 transition-all duration-300 list-hidden">
+              <!-- <li class="text-sm font-medium leading-130 text-black py-2.5 pr-11">Uz</li>
+              <li class="text-sm font-medium leading-130 text-black py-2.5 pr-11">Ru</li> -->
+            </ul>
           </div>
           <div class="flex items-center gap-1">
             <i
