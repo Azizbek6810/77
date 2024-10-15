@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['*.html'],
+  content: ['*.{html, js}'],
   theme: {
     extend: {
       colors: {
@@ -24,6 +24,10 @@ export default {
         '4xl': '0px 4px 15px 0px rgba(56, 143, 243, 0.12)'
       }
     },
-  },
+  }
+  // safelist:[
+  //   'pl-11',
+  //   'pr-3'
+  // ]
 }
 
