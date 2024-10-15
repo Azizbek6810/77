@@ -304,9 +304,8 @@ languages.forEach((lang) => {
 categoryArray.forEach(category => {
      let context =
          `
-         <div class="category-wrapper box-border transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-10 py-5  cursor-pointer group hover:border hover:border-[#388FF3]">
-         <i class="${category.image} transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"
-         ></i>
+         <div class="box-border transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-10 py-5  cursor-pointer group hover:border hover:border-[#388FF3]">
+         <i class="${category.image} transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"></i>
          <div class="flex flex-col">
            <p class="text-black text-base font-semibold leading-normal">
              ${category.title}
@@ -315,12 +314,15 @@ categoryArray.forEach(category => {
              >${category.description} объявлений</span
            >
          </div>
-         <i
-           class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
+         <i class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
          ></i>
        </div>
 `
-    categoryList.insertAdjacentHTML("beforeend", context)
+// let context = `<div class="border rounded-2xl bg-orange-700 pl-10 py-4 cursor-pointer ">
+//   <span>Hello world</span>
+//   <span>Goodbye</span>
+// </div>`;
+    categoryList.innerHTML += context
 });
 
 announcementArray.forEach(announcement => {
