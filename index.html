@@ -1,196 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/icomoon/style.css" />
-    <title>77.uz</title>
-  </head>
 
-  <body class="bg-grey">
-    <header class="bg-white">
-      <div
-        class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]"
-      >
-        <div class="flex items-center gap-6">
-          <div class="relative w-32">
-            <button class="language-btn flex items-center gap-1 cursor-pointer">
-              <img
-                src="/images/icons/ru.svg"
-                alt="language flag"
-                class="h-fit"
-              />
-              <span
-                class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3"
-                >Russian</span
-              >
-              <span class="max-md:inline-block hidden">РУ</span>
-              <i class="icon-down text-2xl leading-6"></i>
-            </button>
-            <ul
-              class="language-list rounded-lg shadow-category p-2 transition-all duration-300 list-hidden absolute w-full bg-white"
-            ></ul>
-          </div>
-          <div class="flex items-center gap-1">
-            <i
-              class="icon-phone text-[#B8BBBD] text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-[#B8BBBD] max-lg:p-2 max-lg:rounded-[50%]"
-            ></i>
-            <a
-              href="tel: +998 88 500 50 00"
-              class="text-sm leading-4 font-medium max-lg:hidden"
-              >+998 88 500 50 00</a
-            >
-          </div>
-        </div>
-        <img
-          src="/images/icons/logo-77.svg"
-          alt="logo-77"
-          class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow max-lg:inset-x-[40%] max-sm:max-w-[120px]"
-        />
-        <div class="flex items-center gap-4">
-          <div class="flex items-center gap-2 cursor-pointer">
-            <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
-            <span
-              class="text-sm leading-5 font-semibold text-black max-lg:hidden"
-              >Избранные</span
-            >
-          </div>
-          <button
-            class="flex items-center gap-2 px-6 py-2.5 bg-[#EAEDF0] rounded-lg"
-          >
-            <span
-              class="text-sm leading-5 font-semibold text-black max-md:hidden"
-              >Войти</span
-            >
-            <i class="icon-login text-black text-xl leading-5"></i>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/icons/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/icomoon/style.css" />
+  <title>77.uz</title>
+</head>
+
+<body class="bg-grey">
+  <header class="bg-white">
+    <div class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]">
+      <div class="flex items-center gap-6">
+        <div class="relative w-32">
+          <button class="language-btn flex items-center gap-1 cursor-pointer">
+            <img src="/images/icons/ru.svg" alt="language flag" class="h-fit" />
+            <span class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3">Russian</span>
+            <span class="max-md:inline-block hidden">РУ</span>
+            <i class="icon-down text-2xl leading-6"></i>
           </button>
+          <ul
+            class="language-list rounded-lg shadow-category p-2 transition-all duration-300 list-hidden absolute w-full bg-white">
+          </ul>
+        </div>
+        <div class="flex items-center gap-1">
+          <i
+            class="icon-phone text-[#B8BBBD] text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-[#B8BBBD] max-lg:p-2 max-lg:rounded-[50%]"></i>
+          <a href="tel: +998 88 500 50 00" class="text-sm leading-4 font-medium max-lg:hidden">+998 88 500 50 00</a>
         </div>
       </div>
-    </header>
-
-    <main>
-      <section
-        class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]"
-      >
-        <div class="container mx-auto max-w-[1184px] justify-center relative">
-          <form
-            class="w-auto max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between"
-          >
-            <div class="flex items-center gap-2 grow">
-              <i class="icon-search text-[#D5D8DB]"></i>
-              <input
-                type="text"
-                placeholder="Что вы ищите?"
-                class="px-2.5 py-4 text-base leading-5 outline-none w-full"
-              />
-            </div>
-            <button
-              class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5"
-            >
-              Поиск
-            </button>
-          </form>
-          <h2
-            class="text-3xl text-center font-bold leading-130 text-black my-2"
-          >
-            Категории
-          </h2>
-          <p
-            class="text-base font-light text-center text-[#8E9297] leading-normal mb-10"
-          >
-            Вы можете найти все категории, которые вам нужны от покупателя
-          </p>
-          <div
-            class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1"
-          >
-       
-          </div>
+      <img src="/images/icons/logo-77.svg" alt="logo-77"
+        class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow max-lg:inset-x-[40%] max-sm:max-w-[120px]" />
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 cursor-pointer">
+          <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
+          <span class="text-sm leading-5 font-semibold text-black max-lg:hidden">Избранные</span>
         </div>
-      </section>
-      <section class="adds container w-[1184px] mx-auto max-md:w-auto">
+        <button class="flex items-center gap-2 px-6 py-2.5 bg-[#EAEDF0] rounded-lg">
+          <span class="text-sm leading-5 font-semibold text-black max-md:hidden">Войти</span>
+          <i class="icon-login text-black text-xl leading-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]">
+      <div class="container mx-auto max-w-[1184px] justify-center relative">
+        <form
+          class="w-auto max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between">
+          <div class="flex items-center gap-2 grow">
+            <i class="icon-search text-[#D5D8DB]"></i>
+            <input type="text" placeholder="Что вы ищите?"
+              class="px-2.5 py-4 text-base leading-5 outline-none w-full" />
+          </div>
+          <button class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5">
+            Поиск
+          </button>
+        </form>
         <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
-          Объявления
+          Категории
         </h2>
-        <p
-          class="text-base font-light text-center text-[#8E9297] leading-normal mb-10"
-        >
+        <p class="text-base font-light text-center text-[#8E9297] leading-normal mb-10">
           Вы можете найти все категории, которые вам нужны от покупателя
         </p>
         <div
-          class="announcement-list grid grid-cols-4 gap-6 mb-10 max-xl:grid-cols-3 max-xl:px-[30px] max-lg:grid-cols-2 max-md:gap-x-5 max-md:gap-y-2 max-sm:grid-cols-1"
-        >
-      
+          class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1">
+          <div
+            class="subcategories-dropdown hidden col-span-3 rounded-xl border border-gray-400 bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
+          </div>
+        </div>
       </div>
-        <button
-          class="px-7 py-[11px] border-2 rounded-[100px] bg-[#EAEDF0] flex items-center justify-center gap-x-2 mx-auto"
-        >
-          <span class="text-base leading-130 text-black font-semibold"
-            >Загрузить больше</span
-          >
-          <i class="icon-double-down text-lg leading-5 font-bold"></i>
-        </button>
-      </section>
+    </section>
+    <section class="adds container w-[1184px] mx-auto max-md:w-auto">
+      <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
+        Объявления
+      </h2>
+      <p class="text-base font-light text-center text-[#8E9297] leading-normal mb-10">
+        Вы можете найти все категории, которые вам нужны от покупателя
+      </p>
+      <div
+        class="announcement-list grid grid-cols-4 gap-6 mb-10 max-xl:grid-cols-3 max-xl:px-[30px] max-lg:grid-cols-2 max-md:gap-x-5 max-md:gap-y-2 max-sm:grid-cols-1">
+      </div>
+      <button
+        class="px-7 py-[11px] border-2 rounded-[100px] bg-[#EAEDF0] flex items-center justify-center gap-x-2 mx-auto">
+        <span class="text-base leading-130 text-black font-semibold">Загрузить больше</span>
+        <i class="icon-double-down text-lg leading-5 font-bold"></i>
+      </button>
+    </section>
 
-      <footer class="mt-[72px] bg-white">
-        <div
-          class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16 max-xl:px-[30px]"
-        >
-          <img
-            src="/images/icons/logo-77.svg"
-            alt="logo"
-            class="w-fit absolute -top-10 inset-x-auto drop-shadow"
-          />
-          <p
-            class="text-base leading-130 font-normal text-center max-w-[669px] mb-6"
-          >
-            77.uz marketplace - это виртуальная платформа в Узбекистане, которая
-            облегчает покупки и продажи, связывая продавцов с потенциальными
-            клиентами.
-          </p>
-          <div
-            class="flex items-center mb-12 gap-x-[72px] max-md:gap-5 flex-wrap justify-center"
-          >
-            <div class="flex-item flex items-center gap-x-1">
-              <img src="/images/icons/symbol.svg" alt="symbol" />
-              <h3
-                class="text-lg font-semibold text-black leading-130 text-center"
-              >
-                Доска объявлений
-              </h3>
-            </div>
-            <div class="flex-item flex items-center gap-x-1">
-              <img src="/images/icons/symbol.svg" alt="symbol" />
-              <h3
-                class="text-lg font-semibold text-black leading-130 text-center"
-              >
-                Условия пользования
-              </h3>
-            </div>
-            <div class="flex-item flex items-center gap-x-1">
-              <img src="/images/icons/symbol.svg" alt="symbol" />
-              <h3
-                class="text-lg font-semibold text-black leading-130 text-center"
-              >
-                <a href="tel: +998 88 500 50 00">+998 88 500 50 00</a>
-              </h3>
-            </div>
+    <footer class="mt-[72px] bg-white">
+      <div
+        class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16 max-xl:px-[30px]">
+        <img src="/images/icons/logo-77.svg" alt="logo" class="w-fit absolute -top-10 inset-x-auto drop-shadow" />
+        <p class="text-base leading-130 font-normal text-center max-w-[669px] mb-6">
+          77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+          облегчает покупки и продажи, связывая продавцов с потенциальными
+          клиентами.
+        </p>
+        <div class="flex items-center mb-12 gap-x-[72px] max-md:gap-5 flex-wrap justify-center">
+          <div class="flex-item flex items-center gap-x-1">
+            <img src="/images/icons/symbol.svg" alt="symbol" />
+            <h3 class="text-lg font-semibold text-black leading-130 text-center">
+              Доска объявлений
+            </h3>
+          </div>
+          <div class="flex-item flex items-center gap-x-1">
+            <img src="/images/icons/symbol.svg" alt="symbol" />
+            <h3 class="text-lg font-semibold text-black leading-130 text-center">
+              Условия пользования
+            </h3>
+          </div>
+          <div class="flex-item flex items-center gap-x-1">
+            <img src="/images/icons/symbol.svg" alt="symbol" />
+            <h3 class="text-lg font-semibold text-black leading-130 text-center">
+              <a href="tel: +998 88 500 50 00">+998 88 500 50 00</a>
+            </h3>
           </div>
         </div>
-        <div class="w-full border-t-2 max-xl:px-[30px]">
-          <div
-            class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto"
-          >
-            <p>© <a href="https://77.uz">77.uz</a> 2023. Все права защищены</p>
-            <div class="flex gap-x-2">
-              <i class="icon-uic"></i>
-              <img src="/images/icons/uic-group.svg" alt="logo" />
-            </div>
+      </div>
+      <div class="w-full border-t-2 max-xl:px-[30px]">
+        <div class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto">
+          <p>© <a href="https://77.uz">77.uz</a> 2023. Все права защищены</p>
+          <div class="flex gap-x-2">
+            <i class="icon-uic"></i>
+            <img src="/images/icons/uic-group.svg" alt="logo" />
           </div>
         </div>
-      </footer>
-    </main>
-    <script type="module" src="/main.js"></script>
-  </body>
+      </div>
+    </footer>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,4 @@
+import { categories } from "./categories"
 const languages = [
   {
     id: 1,
@@ -13,135 +14,7 @@ const languages = [
   }
 ];
 
-const categoryArray = [
-  {
-    id: 1,
-    title: "Для женщин",
-    description: "4 147",
-    image: "icon-girl"
-  },
-  {
-    id: 2,
-    title: "Красота",
-    description: "574",
-    image: "icon-beauty"
-  },
-  {
-    id: 3,
-    title: "Бытовая техника",
-    description: "574",
-    image: "icon-fridge"
-  },
-  {
-    id: 4,
-    title: "Для мужчин",
-    description: "574",
-    image: "icon-boy"
-  },
-  {
-    id: 5,
-    title: "Здоровье",
-    description: "684",
-    image: "icon-heart-puls"
-  },
-  {
-    id: 6,
-    title: "Электроника",
-    description: "4147",
-    image: "icon-pc-phone"
-  },
-  {
-    id: 7,
-    title: "Детские товары",
-    description: "635",
-    image: "icon-carriage"
-  },
-  {
-    id: 8,
-    title: "Украшения и бижутерия",
-    description: "4147",
-    image: "icon-jewelry"
-  },
-  {
-    id: 9,
-    title: "Домашняя утварь",
-    description: "322",
-    image: "icon-blender"
-  },
-  {
-    id: 10,
-    title: "Обувь",
-    description: "342",
-    image: "icon-sneakers"
-  },
-  {
-    id: 11,
-    title: "Канцелярия",
-    description: "101",
-    image: "icon-pencil"
-  },
-  {
-    id: 12,
-    title: "Спорт и отдых",
-    description: "741",
-    image: "icon-umbrella"
-  },
-  {
-    id: 13,
-    title: "Автотовары",
-    description: "545",
-    image: "icon-spanner"
-  },
-  {
-    id: 14,
-    title: "Новые легковые автомобили",
-    description: "5435",
-    image: "icon-car"
-  },
 
-  {
-    id: 15,
-    title: "Мототранспорт",
-    description: "222",
-    image: "icon-motocycle"
-  },
-  {
-    id: 16,
-    title: "Дача, сады и огороды",
-    description: "787",
-    image: "icon-sapling"
-  },
-  {
-    id: 17,
-    title: "Личная гигиена",
-    description: "990",
-    image: "icon-cleaning"
-  },
-  {
-    id: 18,
-    title: "Аксессуарлар",
-    description: "574",
-    image: "icon-woman-bag"
-  },
-  {
-    id: 19,
-    title: "Бытовая химия и личная гигиена",
-    description: "105",
-    image: "icon-sneakers"
-  },
-  {
-    id: 20,
-    title: "Строительство и ремонт",
-    description: "478",
-    image: "icon-worker"
-  },
-  {
-    id: 21,
-    title: "Сумки и чемоданы",
-    description: "300",
-    image: "icon-backpack"
-  },
-];
 
 const announcementArray = [
   {
@@ -259,11 +132,11 @@ const langBtn = document.querySelector('.language-btn');
 const langText = langBtn.querySelector('span');
 const langImg = langBtn.querySelector('img');
 let langList = document.querySelector('.language-list');
-let categoryList = document.querySelector('.category-list');
 let announcementList = document.querySelector('.announcement-list');
 
 let activeLanguage = "uz";
 let activeLanguageObj;
+let activeIdx = null;
 
 const toggleLangList = () => {
   if (langList.classList.contains('list-hidden')) {
@@ -301,70 +174,138 @@ languages.forEach((lang) => {
   langList.append(liElement);
 });
 
-categoryArray.forEach(category => {
-  let context =
-    `
-         <div class="box-border transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-10 py-5  cursor-pointer group hover:border hover:border-[#388FF3]">
-         <i class="${category.image} transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"></i>
-         <div class="flex flex-col">
-           <p class="text-black text-base font-semibold leading-normal">
-             ${category.title}
-           </p>
-           <span class="text-[#8E9297] font-normal leading-130 text-sm"
-             >${category.description} объявлений</span
-           >
-         </div>
-         <i class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"
-         ></i>
-       </div>
-`
-  categoryList.innerHTML += context
-});
+const hideEl = (el, display = "block") => {
+  if (display) {
+    el.classList.remove(display)
+  }
+
+  el.classList.add("hidden");
+}
+
+const showEl = (el, display = "block") => {
+  el.classList.remove("hidden");
+
+  if (display) {
+    el.classList.add(display)
+  }
+}
+
+const getCategoryTemplate = (category, idx) => {
+  return `
+  <div class="box-border transition-300 flex shadow-3xl items-center justify-between border rounded-xl relative pl-10 py-5  cursor-pointer group hover:border hover:border-[#388FF3]"
+   data-index="${idx}" 
+   onclick="toggleDropdown(${idx})"
+  >
+    <i class="${category.image} transition-300 text-[#388FF3] bg-white absolute -left-8 text-3xl p-4 shadow-category border rounded-xl group-hover:text-white group-hover:bg-[#388FF3]"></i>
+      <div class="flex flex-col">
+        <p class="text-black text-base font-semibold leading-normal">
+          ${category.title}
+        </p>
+        <span class="text-[#8E9297] font-normal leading-130 text-sm"
+          >${category.description} объявлений</span
+        >
+      </div>
+      <i class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"></i>
+  </div>`
+}
+
+const renderCategories = () => {
+  const categoriesSection = document.querySelector(".category-list");
+
+  categories.forEach((category, idx) => {
+    categoriesSection.innerHTML += getCategoryTemplate(category, idx)
+  })
+}
+
+renderCategories()
+
+const getSubcategoryTemplate = (subcategory) => {
+  return `
+  <a href="#" class="flex items-center justify-between gap-3 p-3">
+   <h4>${subcategory.name}</h4>
+   <i class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"></i>
+  </a>
+  `
+}
 
 announcementArray.forEach(announcement => {
   const context =
-    `
-    <article
-    class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto"
-  >
-    <img
-      class="rounded-t-xl w-full"
-      src="/images/home/${announcement.image}"
-      alt="cap"
-    />
-    <div
-      class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2"
-    >
-      <p
-        class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit"
-      >
-        ${announcement.country}
-      </p>
-      <h3
-        class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]"
-      >
-        ${announcement.title}
-      </h3>
-      <span class="text-[#8E9297] font-normal leading-130 text-sm"
-        >${announcement.date}</span
-      >
-      <a
-        href="tel:+998 71 200 70 07"
-        class="text-[#8E9297] font-semibold leading-130 text-base"
-        >${announcement.telephone}</a
-      >
-      <b class="text-black font-bold text-2xl leading-130"
-        >${announcement.price}
-        <span class="text-[#388FF3] leading-4 text-base font-normal"
-          >UZS</span
-        ></b
-      >
-    </div>
-    <i
-      class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
-    ></i>
-  </article>
-    `
+    `<article class="card border-none shadow-4xl relative group cursor-pointer max-sm:w-[70%] max-sm:mx-auto">
+      <img
+        class="rounded-t-xl w-full"
+        src="/images/home/${announcement.image}"
+        alt="cap"
+      />
+      <div class="card-body bg-white p-5 rounded-b-xl flex flex-col gap-y-2">
+        <p class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit">
+          ${announcement.country}
+        </p>
+        <h3 class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]">
+          ${announcement.title}
+        </h3>
+        <span class="text-[#8E9297] font-normal leading-130 text-sm">${announcement.date}</span>
+        <a
+          href="tel:+998 71 200 70 07"
+          class="text-[#8E9297] font-semibold leading-130 text-base">
+          ${announcement.telephone}</a
+        >
+        <b class="text-black font-bold text-2xl leading-130"
+          >${announcement.price}
+          <span class="text-[#388FF3] leading-4 text-base font-normal"
+            >UZS</span
+          ></b
+        >
+      </div>
+      <i
+        class="icon-heart inline-block absolute top-3 left-3 text-white text-4xl font-medium leading-10 cursor-pointer"
+      ></i>
+  </article>`
   announcementList.innerHTML += context
 })
 
+const adjustDropdownPosition = (categoryIdx, dropdownContainer) => {
+  const activeRow = Math.floor(categoryIdx / 3) + 2;
+  dropdownContainer.style.gridRow = activeRow;
+}
+
+const toggleDropdownVisibility = () => {
+  if (dropdownContainer.classList.contains("hidden")) {
+    showEl(dropdownContainer, "grid");
+  } else if (activeIdx === categoryIdx) {
+    hideEl(dropdownContainer, "grid");
+  }
+}
+
+const renderSubcategories = (subcategories, dropdownContainer) => {
+  dropdownContainer.innerHTML = subcategories ?
+    subcategories.map(getSubcategoryTemplate).join("")
+    : "Empty"
+}
+
+const toggleCategoryActive = (categoryIdx) => {
+  const categories = document.querySelectorAll(".category-list");
+
+  categories.forEach((c) => c.classList.remove("active"));
+
+  if (activeIdx === categoryIdx) {
+    categories[categoryIdx].classList.remove("active")
+  } else {
+    categories[categoryIdx].classList.toggle("active")
+  }
+}
+
+window.toggleDropdown = (categoryIdx) => {
+  const subcategories = categories[categoryIdx].subcategories;
+
+  const dropdownContainer = document.querySelector(".subcategories-dropdown");
+
+  adjustDropdownPosition(categoryIdx, dropdownContainer);
+
+  toggleDropdownVisibility(categoryIdx, dropdownContainer);
+
+  toggleCategoryActive(categoryIdx);
+
+  renderSubcategories(subcategories, dropdownContainer);
+
+  activeIdx = categoryIdx;
+}
