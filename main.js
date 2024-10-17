@@ -134,9 +134,10 @@ const langImg = langBtn.querySelector('img');
 let langList = document.querySelector('.language-list');
 let announcementList = document.querySelector('.announcement-list');
 
+
 let activeLanguage = "uz";
 let activeLanguageObj;
-let activeIdx = null;
+
 
 const toggleLangList = () => {
   if (langList.classList.contains('list-hidden')) {
@@ -217,7 +218,7 @@ const renderCategories = () => {
   })
 }
 
-renderCategories()
+renderCategories();
 
 const getSubcategoryTemplate = (subcategory) => {
   return `
@@ -226,6 +227,56 @@ const getSubcategoryTemplate = (subcategory) => {
    <i class="icon-down -rotate-90 inline-block text-xl leading-5 text-[#B8BBBD]"></i>
   </a>
   `
+}
+
+let activeIdx = null;
+
+const adjustDropdownPosition = (categoryIdx, dropdownContainer) => {
+  const activeRow = Math.floor(categoryIdx / 3) + 2;
+  dropdownContainer.style.gridRow = activeRow;
+}
+
+const toggleDropdownVisibility = (categoryIdx, dropdownContainer) => {
+  if (dropdownContainer.classList.contains("hidden")) {
+    showEl(dropdownContainer, "grid");
+  } else if (activeIdx === categoryIdx) {
+    hideEl(dropdownContainer, "grid");
+  }
+}
+
+const renderSubcategories = (subcategories, dropdownContainer) => {
+  dropdownContainer.innerHTML = subcategories ?
+    subcategories.map(getSubcategoryTemplate).join("")
+    : "Empty"
+}
+
+const toggleCategoryActive = (categoryIdx) => {
+  const categoryList = document.querySelectorAll(".category-list");
+
+  categoryList.forEach((c) => c.classList.remove("active"));
+
+  if (activeIdx === categoryIdx) {
+    categoryList[categoryIdx]?.classList.remove("active")
+  } else {
+    categoryList[categoryIdx]?.classList.add("active")
+  }
+}
+
+window.toggleDropdown = (categoryIdx) => {
+
+  const subcategories = categories[categoryIdx].subcategories;
+
+  const dropdownContainer = document.querySelector(".subcategories-dropdown");
+
+  adjustDropdownPosition(categoryIdx, dropdownContainer);
+
+  toggleDropdownVisibility(categoryIdx, dropdownContainer);
+
+  toggleCategoryActive(categoryIdx);
+
+  renderSubcategories(subcategories, dropdownContainer);
+
+  activeIdx = categoryIdx;
 }
 
 announcementArray.forEach(announcement => {
@@ -262,50 +313,3 @@ announcementArray.forEach(announcement => {
   </article>`
   announcementList.innerHTML += context
 })
-
-const adjustDropdownPosition = (categoryIdx, dropdownContainer) => {
-  const activeRow = Math.floor(categoryIdx / 3) + 2;
-  dropdownContainer.style.gridRow = activeRow;
-}
-
-const toggleDropdownVisibility = () => {
-  if (dropdownContainer.classList.contains("hidden")) {
-    showEl(dropdownContainer, "grid");
-  } else if (activeIdx === categoryIdx) {
-    hideEl(dropdownContainer, "grid");
-  }
-}
-
-const renderSubcategories = (subcategories, dropdownContainer) => {
-  dropdownContainer.innerHTML = subcategories ?
-    subcategories.map(getSubcategoryTemplate).join("")
-    : "Empty"
-}
-
-const toggleCategoryActive = (categoryIdx) => {
-  const categories = document.querySelectorAll(".category-list");
-
-  categories.forEach((c) => c.classList.remove("active"));
-
-  if (activeIdx === categoryIdx) {
-    categories[categoryIdx].classList.remove("active")
-  } else {
-    categories[categoryIdx].classList.toggle("active")
-  }
-}
-
-window.toggleDropdown = (categoryIdx) => {
-  const subcategories = categories[categoryIdx].subcategories;
-
-  const dropdownContainer = document.querySelector(".subcategories-dropdown");
-
-  adjustDropdownPosition(categoryIdx, dropdownContainer);
-
-  toggleDropdownVisibility(categoryIdx, dropdownContainer);
-
-  toggleCategoryActive(categoryIdx);
-
-  renderSubcategories(subcategories, dropdownContainer);
-
-  activeIdx = categoryIdx;
-}
