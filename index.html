@@ -11,10 +11,14 @@
 </head>
 
 <body class="bg-grey">
+
+  <!-- Header -->
   <header class="bg-white">
     <div class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]">
       <div class="flex items-center gap-6">
         <div class="relative w-32">
+
+          <!-- Lang button -->
           <button class="language-btn flex items-center gap-1 cursor-pointer">
             <img src="/images/icons/ru.svg" alt="language flag" class="h-fit" />
             <span class="max-md:hidden inline-block text-black font-medium text-[18px] leading-3">Russian</span>
@@ -25,20 +29,28 @@
             class="language-list rounded-lg shadow-category p-2 transition-all duration-300 list-hidden absolute w-full bg-white">
           </ul>
         </div>
+
+        <!-- phone number -->
         <div class="flex items-center gap-1">
           <i
-            class="icon-phone text-[#B8BBBD] text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-[#B8BBBD] max-lg:p-2 max-lg:rounded-[50%]"></i>
+            class="icon-phone text-grey-200 text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-grey-200 max-lg:p-2 max-lg:rounded-[50%]"></i>
           <a href="tel: +998 88 500 50 00" class="text-sm leading-4 font-medium max-lg:hidden">+998 88 500 50 00</a>
         </div>
       </div>
+
+      <!-- Logo image -->
       <img src="/images/icons/logo-77.svg" alt="logo-77"
         class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow max-lg:inset-x-[40%] max-sm:max-w-[120px]" />
       <div class="flex items-center gap-4">
-        <div class="flex items-center gap-2 cursor-pointer">
+
+        <!-- Like button -->
+        <div class="flex items-center gap-2 cursor-pointer hover:bg-slate-300 px-6 py-2 rounded-lg transition-300">
           <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
           <span class="text-sm leading-5 font-semibold text-black max-lg:hidden">Избранные</span>
         </div>
-        <button class="flex items-center gap-2 px-6 py-2.5 bg-[#EAEDF0] rounded-lg">
+
+        <!-- Login button -->
+        <button class="flex items-center gap-2 px-6 py-2.5 bg-grey-50 rounded-lg hover:bg-slate-300 transition-300">
           <span class="text-sm leading-5 font-semibold text-black max-md:hidden">Войти</span>
           <i class="icon-login text-black text-xl leading-5"></i>
         </button>
@@ -47,6 +59,7 @@
   </header>
 
   <main>
+    <!-- Catecory section -->
     <section class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]">
       <div class="container mx-auto max-w-[1184px] justify-center relative">
         <form
@@ -56,14 +69,14 @@
             <input type="text" placeholder="Что вы ищите?"
               class="px-2.5 py-4 text-base leading-5 outline-none w-full" />
           </div>
-          <button class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5">
+          <button class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5 hover:bg-gray-700">
             Поиск
           </button>
         </form>
         <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
           Категории
         </h2>
-        <p class="text-base font-light text-center text-[#8E9297] leading-normal mb-10">
+        <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
           Вы можете найти все категории, которые вам нужны от покупателя
         </p>
         <div
@@ -74,64 +87,68 @@
         </div>
       </div>
     </section>
+
+    <!-- Announsement section -->
     <section class="adds container w-[1184px] mx-auto max-md:w-auto">
       <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
         Объявления
       </h2>
-      <p class="text-base font-light text-center text-[#8E9297] leading-normal mb-10">
+      <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
         Вы можете найти все категории, которые вам нужны от покупателя
       </p>
       <div
         class="announcement-list grid grid-cols-4 gap-6 mb-10 max-xl:grid-cols-3 max-xl:px-[30px] max-lg:grid-cols-2 max-md:gap-x-5 max-md:gap-y-2 max-sm:grid-cols-1">
       </div>
       <button
-        class="px-7 py-[11px] border-2 rounded-[100px] bg-[#EAEDF0] flex items-center justify-center gap-x-2 mx-auto">
+        class="px-7 py-[11px] border-2 rounded-[100px] bg-grey-50 flex items-center justify-center gap-x-2 mx-auto hover:bg-gray-300 transition-200">
         <span class="text-base leading-130 text-black font-semibold">Загрузить больше</span>
         <i class="icon-double-down text-lg leading-5 font-bold"></i>
       </button>
     </section>
 
-    <footer class="mt-[72px] bg-white">
-      <div
-        class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16 max-xl:px-[30px]">
-        <img src="/images/icons/logo-77.svg" alt="logo" class="w-fit absolute -top-10 inset-x-auto drop-shadow" />
-        <p class="text-base leading-130 font-normal text-center max-w-[669px] mb-6">
-          77.uz marketplace - это виртуальная платформа в Узбекистане, которая
-          облегчает покупки и продажи, связывая продавцов с потенциальными
-          клиентами.
-        </p>
-        <div class="flex items-center mb-12 gap-x-[72px] max-md:gap-5 flex-wrap justify-center">
-          <div class="flex-item flex items-center gap-x-1">
-            <img src="/images/icons/symbol.svg" alt="symbol" />
-            <h3 class="text-lg font-semibold text-black leading-130 text-center">
-              Доска объявлений
-            </h3>
-          </div>
-          <div class="flex-item flex items-center gap-x-1">
-            <img src="/images/icons/symbol.svg" alt="symbol" />
-            <h3 class="text-lg font-semibold text-black leading-130 text-center">
-              Условия пользования
-            </h3>
-          </div>
-          <div class="flex-item flex items-center gap-x-1">
-            <img src="/images/icons/symbol.svg" alt="symbol" />
-            <h3 class="text-lg font-semibold text-black leading-130 text-center">
-              <a href="tel: +998 88 500 50 00">+998 88 500 50 00</a>
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="w-full border-t-2 max-xl:px-[30px]">
-        <div class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto">
-          <p>© <a href="https://77.uz">77.uz</a> 2023. Все права защищены</p>
-          <div class="flex gap-x-2">
-            <i class="icon-uic"></i>
-            <img src="/images/icons/uic-group.svg" alt="logo" />
-          </div>
-        </div>
-      </div>
-    </footer>
   </main>
+
+  <!-- Footer -->
+  <footer class="mt-[72px] bg-white">
+    <div
+      class="container text-center max-w-[1184px] mx-auto flex flex-col justify-center items-center relative pt-16 max-xl:px-[30px]">
+      <img src="/images/icons/logo-77.svg" alt="logo" class="w-fit absolute -top-10 inset-x-auto drop-shadow" />
+      <p class="text-base leading-130 font-normal text-center max-w-[669px] mb-6">
+        77.uz marketplace - это виртуальная платформа в Узбекистане, которая
+        облегчает покупки и продажи, связывая продавцов с потенциальными
+        клиентами.
+      </p>
+      <div class="flex items-center mb-12 gap-x-[72px] max-md:gap-5 flex-wrap justify-center">
+        <a href="#" class="flex-item flex items-center gap-x-1">
+          <img src="/images/icons/symbol.svg" alt="symbol" />
+          <h3 class="text-lg font-semibold text-black leading-130 text-center">
+            Доска объявлений
+          </h3>
+        </a>
+        <a href="#" class="flex-item flex items-center gap-x-1">
+          <img src="/images/icons/symbol.svg" alt="symbol" />
+          <h3 class="text-lg font-semibold text-black leading-130 text-center">
+            Условия пользования
+          </h3>
+        </a>
+        <div class="flex-item flex items-center gap-x-1">
+          <img src="/images/icons/symbol.svg" alt="symbol" />
+          <h3 class="text-lg font-semibold text-black leading-130 text-center">
+            <a href="tel: +998 88 500 50 00">+998 88 500 50 00</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="w-full border-t-2 max-xl:px-[30px]">
+      <div class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto">
+        <p>© <a href="https://77.uz">77.uz</a> <span class="currentYear"></span>. Все права защищены</p>
+        <div class="flex gap-x-2">
+          <i class="icon-uic"></i>
+          <img src="/images/icons/uic-group.svg" alt="logo" />
+        </div>
+      </div>
+    </div>
+  </footer>
   <script type="module" src="/main.js"></script>
 </body>
 

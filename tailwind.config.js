@@ -14,7 +14,12 @@ export default {
           DEFAULT: "#fff",
           100: "#f5f7fa"
         },
-        grey: "#F0F3F7"
+        grey: {
+          DEFAULT: "#F0F3F7",
+          50: "#EAEDF0",
+          100: "#8E9297",
+          200:"#B8BBBD",
+        }
       },
       fontFamily: {
         'inter': ["Inter"]

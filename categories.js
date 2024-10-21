@@ -107,7 +107,35 @@ export const categories = [
         id: 6,
         title: "Электроника",
         description: "4147",
-        image: "icon-pc-phone"
+        image: "icon-pc-phone",
+        subcategoriesCount: 12,
+        subcategories: [
+            {
+                id: 51,
+                slug: "fitness-bracelet",
+                name: "Фитнес браслеты"
+            },
+            {
+                id: 52,
+                slug: "watches",
+                name: "Ремешки для часов и смарт-часов"
+            },
+            {
+                id: 53,
+                slug: "spare-parts",
+                name: "Запчасти для смартфонов"
+            },
+            {
+                id: 54,
+                slug: "fitness-bracelet",
+                name: "Фитнес браслеты"
+            },
+            {
+                id: 55,
+                slug: "spare-parts",
+                name: "Запчасти для смартфонов"
+            },
+        ]
     },
     {
         id: 7,

@@ -1,18 +1,5 @@
 import { categories } from "./categories"
-const languages = [
-  {
-    id: 1,
-    code: "uz",
-    title: "O'zbek",
-    image: "/images/icons/uz.svg"
-  },
-  {
-    id: 2,
-    code: "ru",
-    title: "Русский",
-    image: "/images/icons/ru.svg"
-  }
-];
+import { languages } from "./langs";
 
 
 
@@ -133,6 +120,7 @@ const langText = langBtn.querySelector('span');
 const langImg = langBtn.querySelector('img');
 let langList = document.querySelector('.language-list');
 let announcementList = document.querySelector('.announcement-list');
+let currentYear = document.querySelector('.currentYear');
 
 
 let activeLanguage = "uz";
@@ -146,6 +134,8 @@ const toggleLangList = () => {
     langList.classList.add('list-hidden');
   }
 }
+
+currentYear.innerHTML = new Date().getFullYear()
 
 const updateLangBtn = () => {
   langText.innerText = activeLanguageObj.title;
@@ -214,7 +204,7 @@ const renderCategories = () => {
   const categoriesSection = document.querySelector(".category-list");
 
   categories.forEach((category, idx) => {
-    categoriesSection.innerHTML += getCategoryTemplate(category, idx)
+    categoriesSection.innerHTML += getCategoryTemplate(category, idx);
   })
 }
 
@@ -291,7 +281,7 @@ announcementArray.forEach(announcement => {
         <p class="bg-[#eaedf0] text-[#63676C] inline-block py-1 px-2 rounded-md w-fit">
           ${announcement.country}
         </p>
-        <h3 class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3]">
+        <h3 class="text-black text-lg leading-130 font-semibold min-h-[46.78px] group-hover:text-[#388FF3] transition-300">
           ${announcement.title}
         </h3>
         <span class="text-[#8E9297] font-normal leading-130 text-sm">${announcement.date}</span>
