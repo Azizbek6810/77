@@ -61,30 +61,45 @@
   <main>
     <!-- Catecory section -->
     <section class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]">
-      <div class="container mx-auto max-w-[1184px] justify-center relative">
+      <div class="container mx-auto max-w-[1184px] justify-center">
         <form
-          class="w-auto max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] absolute px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between">
-          <div class="flex items-center gap-2 grow">
-            <i class="icon-search text-[#D5D8DB]"></i>
-            <input type="text" placeholder="Что вы ищите?"
-              class="px-2.5 py-4 text-base leading-5 outline-none w-full" />
+          class="z-30 w-1/2 max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] relative px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between">
+          <div class="flex items-center grow relative z-30">
+            <div class="flex items-center gap-2 grow">
+              <i class="icon-search text-[#D5D8DB]"></i>
+              <input type="text" placeholder="Что вы ищите?"
+                class="search-input px-2.5 py-4 text-base leading-5 outline-none w-full" />
+            </div>
+            <button
+              class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5 hover:bg-gray-700">
+              Поиск
+            </button>
           </div>
-          <button class="bg-black text-white-100 py-[11px] px-7 rounded text-base font-bold grow-0 leading-5 hover:bg-gray-700">
-            Поиск
-          </button>
-        </form>
-        <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
-          Категории
-        </h2>
-        <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
-          Вы можете найти все категории, которые вам нужны от покупателя
-        </p>
+
+          <!-- search dropdown -->
+          <div class="dropdown-wrapper opacity-0 invisible">
+            <div class="dropdown-background fixed inset-0 w-screen h-screen bg-black/50 z-10"></div>
+            <div class="absolute top-14 z-30 left-0 bg-white w-full p-4 pb-0 rounded-lg">
+              <p class="search-dropdown__header text-[#8E9297] text-sm pb-4">История поиска</p>
+              <ul class="search_dropdown__list">
+              
+              </ul>
+            </div>
+          </div>
+      </div>
+      </form>
+      <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
+        Категории
+      </h2>
+      <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
+        Вы можете найти все категории, которые вам нужны от покупателя
+      </p>
+      <div
+        class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1">
         <div
-          class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1">
-          <div
-            class="subcategories-dropdown hidden col-span-3 rounded-xl border bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
-          </div>
+          class="subcategories-dropdown hidden col-span-3 rounded-xl border bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
         </div>
+      </div>
       </div>
     </section>
 

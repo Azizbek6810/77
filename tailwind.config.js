@@ -19,6 +19,9 @@ export default {
           50: "#EAEDF0",
           100: "#8E9297",
           200:"#B8BBBD",
+        },
+        orange: {
+          DEFAULT: "#FFCC18"
         }
       },
       fontFamily: {
@@ -30,9 +33,5 @@ export default {
       }
     },
   }
-  // safelist:[
-  //   'pl-11',
-  //   'pr-3'
-  // ]
 }
 
