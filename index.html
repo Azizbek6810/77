@@ -50,10 +50,70 @@
         </div>
 
         <!-- Login button -->
-        <button class="flex items-center gap-2 px-6 py-2.5 bg-grey-50 rounded-lg hover:bg-slate-300 transition-300">
+        <button
+          class="login-button flex items-center gap-2 px-6 py-2.5 bg-grey-50 rounded-lg hover:bg-slate-300 transition-300">
           <span class="text-sm leading-5 font-semibold text-black max-md:hidden">Войти</span>
           <i class="icon-login text-black text-xl leading-5"></i>
         </button>
+
+        <!-- Login wrapper -->
+        <div class="login-wrapper opacity-0 invisible">
+          <div class="login-background fixed inset-0 w-screen h-screen bg-black/50 z-40"></div>
+
+          <!-- Login content -->
+          <div
+            class="login-content z-50 fixed w-96 h-auto bg-white p-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="text-2xl text-black font-bold leadeing-130">Добро пожаловать!</h4>
+
+              <!-- close icon -->
+              <i class="login-close icon-close cursor-pointer text-2xl leading-6"></i>
+            </div>
+            <div class="">
+              <span class="text-grey-100 text-sm font-medium leading-130">Войти в систему чтобы торговать в
+                системе</span>
+              <form class="mt-7 flex flex-col">
+
+                <!-- form group -->
+                <div class="form-group flex flex-col gap-2 mb-4">
+                  <label for="login-label" class="text-grey-300 text-sm leading-5 font-medium">Логин</label>
+                  <input type="text" id="login-label" class="bg-grey rounded-lg p-3 text-sm outline-1 outline-blue-300"
+                    placeholder="Введите логин">
+                </div>
+
+                <!-- form group -->
+                <div class="form-group flex flex-col gap-2 mb-2">
+                  <label for="password-label" class="text-grey-300 text-sm leading-5 font-medium">Пароль</label>
+                  <div class="relative w-full">
+                    <input type="password" id="password-label"
+                      class="bg-grey rounded-lg p-3 pr-10 text-sm outline-1 outline-blue-300 w-full" placeholder="Введите пароль">
+                    <i class="icon-eye-closed absolute top-[10px] right-[10px] text-2xl text-grey-100 cursor-pointer"></i>
+                  </div>
+                </div>
+
+                <!-- forgot password link -->
+                <a href="#" class="text-blue text-xs leading-130 font-normal">Забыли пароль?</a>
+
+                <div class="login-content__buttons mt-16">
+                  <!-- submit button -->
+                  <button type="submit"
+                    class="bg-blue text-base font-semibold leading-130 text-white rounded-lg block w-full py-3 border border-white hover:bg-white hover:text-blue hover:border-blue transition-300">Войти</button>
+                  <div class="flex items-center gap-1 my-3 justify-center">
+                    <div class="line w-20 h-[1px] bg-grey-50"></div>
+                    <span class="text-xs text-grey-100 leading-130 font-normal">Хотите стать продавцом?</span>
+                    <div class="line w-20 h-[1px] bg-grey-50"></div>
+                  </div>
+
+                  <!-- Bid button -->
+                  <button type="button"
+                    class="bg-white text-base font-semibold leading-130 text-blue rounded-lg block w-full py-2 border border-blue hover:bg-blue hover:text-white transition-300">Подать
+                    заявку</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </header>
@@ -82,24 +142,23 @@
             <div class="absolute top-14 z-30 left-0 bg-white w-full p-4 pb-0 rounded-lg">
               <p class="search-dropdown__header text-[#8E9297] text-sm pb-4">История поиска</p>
               <ul class="search_dropdown__list">
-              
+
               </ul>
             </div>
           </div>
-      </div>
-      </form>
-      <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
-        Категории
-      </h2>
-      <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
-        Вы можете найти все категории, которые вам нужны от покупателя
-      </p>
-      <div
-        class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1">
+        </form>
+        <h2 class="text-3xl text-center font-bold leading-130 text-black my-2">
+          Категории
+        </h2>
+        <p class="text-base font-light text-center text-grey-100 leading-normal mb-10">
+          Вы можете найти все категории, которые вам нужны от покупателя
+        </p>
         <div
-          class="subcategories-dropdown hidden col-span-3 rounded-xl border bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
+          class="category-list grid grid-cols-3 gap-x-14 gap-y-5 mb-6 px-10 max-xl:grid-cols-2 max-xl:px-16 max-md:grid-cols-1">
+          <div
+            class="subcategories-dropdown hidden col-span-3 rounded-xl border bg-white p-5 grid-cols-3 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
+          </div>
         </div>
-      </div>
       </div>
     </section>
 

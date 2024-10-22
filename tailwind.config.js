@@ -18,10 +18,14 @@ export default {
           DEFAULT: "#F0F3F7",
           50: "#EAEDF0",
           100: "#8E9297",
-          200:"#B8BBBD",
+          200: "#B8BBBD",
+          300: "#63676c"
         },
         orange: {
           DEFAULT: "#FFCC18"
+        },
+        blue: {
+          DEFAULT: "#388FF3"
         }
       },
       fontFamily: {

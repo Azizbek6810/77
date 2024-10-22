@@ -231,7 +231,9 @@ let dropdownWrapper = document.querySelector('.dropdown-wrapper');
 let searchDropdownList = document.querySelector('.search_dropdown__list');
 let dropdownBackground = document.querySelector('.dropdown-background');
 
-let isSearchOpened = false
+let isSearchOpened = false;
+let inputValue;
+let resultArray;
 
 const renderSearchResult = (array = searchArray, inputValue) => {
   searchDropdownList.innerHTML = '';
@@ -265,9 +267,6 @@ const renderSearchResult = (array = searchArray, inputValue) => {
     `
 }
 
-let inputValue;
-let resultArray;
-
 searchInputEl.addEventListener('click', () => {
   isSearchOpened = !isSearchOpened
 
@@ -298,11 +297,40 @@ searchInputEl.addEventListener('input', (e) => {
     })
     renderSearchResult(resultArray, inputValue)
   }, 500);
+});
+
+const loginButton = document.querySelector('.login-button');
+const loginWrapper = document.querySelector('.login-wrapper');
+const loginBackground = document.querySelector('.login-background');
+const loginContent = document.querySelector('.login-content');
+const loginClose = document.querySelector('.login-close');
+const iconEyeClosed = document.querySelector('.icon-eye-closed');
+const passwordInput = document.querySelector('#password-label');
+
+let isLoginContentOpened = false;
+
+loginButton.addEventListener('click', () => {
+  isLoginContentOpened = !isLoginContentOpened;
+
+  if (isLoginContentOpened) {
+    loginWrapper.classList.add('!opacity-100');
+    loginWrapper.classList.add('!visible');
+  } else {
+    loginWrapper.classList.remove('!opacity-100');
+    loginWrapper.classList.remove('!visible');
+  }
 })
 
+loginClose.addEventListener("click", () => {
+  isLoginContentOpened = !isLoginContentOpened;
 
+  loginWrapper.classList.remove('!opacity-100');
+  loginWrapper.classList.remove('!visible');
+})
 
-
+iconEyeClosed.addEventListener('click', ()=>{
+  passwordInput.getAttribute("")
+})
 
 
 
