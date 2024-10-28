@@ -26,7 +26,8 @@ export default {
         },
         blue: {
           DEFAULT: "#388FF3"
-        }
+        },
+        shahzod: "#FFCC18"
       },
       fontFamily: {
         'inter': ["Inter"]

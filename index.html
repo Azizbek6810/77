@@ -12,12 +12,15 @@
 
 <body class="bg-grey">
 
+  <div class="dropdown-background fixed inset-0 w-screen h-screen bg-black/50 z-10 opacity-0 invisible"></div>
+  <!-- <div class="login-background fixed inset-0 w-screen h-screen bg-black/50 z-40"></div> -->
+
   <!-- Header -->
   <header class="bg-white">
-    <div class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px]">
+    <div
+      class="container mx-auto max-w-[1184px] flex items-center py-5 justify-between relative max-xl:px-[30px] max-sm:px-4">
       <div class="flex items-center gap-6">
-        <div class="relative w-32">
-
+        <div class="relative w-32 max-md:w-auto">
           <!-- Lang button -->
           <button class="language-btn flex items-center gap-1 cursor-pointer">
             <img src="/images/icons/ru.svg" alt="language flag" class="h-fit" />
@@ -31,7 +34,7 @@
         </div>
 
         <!-- phone number -->
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-1 max-sm:hidden">
           <i
             class="icon-phone text-grey-200 text-xl leading-5 max-lg:cursor-pointer max-lg:text-white max-lg:bg-grey-200 max-lg:p-2 max-lg:rounded-[50%]"></i>
           <a href="tel: +998 88 500 50 00" class="text-sm leading-4 font-medium max-lg:hidden">+998 88 500 50 00</a>
@@ -40,90 +43,97 @@
 
       <!-- Logo image -->
       <img src="/images/icons/logo-77.svg" alt="logo-77"
-        class="absolute rounded-b-2xl bg-white top-0 inset-x-[45%] py-3.5 px-4 shadow max-lg:inset-x-[40%] max-sm:max-w-[120px]" />
-      <div class="flex items-center gap-4">
+        class="absolute rounded-b-2xl bg-white left-1/2 -translate-x-1/2 py-3.5 px-4 shadow max-sm:max-w-[116px] max-sm:rounded-2xl max-sm:border max-sm:top-1" />
 
+      <div class="flex items-center gap-4 max-sm:gap-3">
         <!-- Like button -->
-        <div class="flex items-center gap-2 cursor-pointer hover:bg-slate-300 px-6 py-2 rounded-lg transition-300">
-          <i class="icon-heart text-[#388FF3] text-2xl leading-6"></i>
+        <div
+          class="flex items-center gap-2 cursor-pointer hover:bg-slate-300 px-6 py-2 rounded-lg transition-300 max-lg:bg-grey-50 max-lg:p-[6px]">
+          <i class="icon-heart text-[#388FF3] text-2xl leading-6 max-md:text-xl max-md:leading-5"></i>
           <span class="text-sm leading-5 font-semibold text-black max-lg:hidden">Избранные</span>
         </div>
 
         <!-- Login button -->
         <button
-          class="login-button flex items-center gap-2 px-6 py-2.5 bg-grey-50 rounded-lg hover:bg-slate-300 transition-300">
+          class="login-button flex items-center gap-2 px-6 py-2.5 bg-grey-50 rounded-lg hover:bg-slate-300 transition-300 max-md:p-[6px]">
           <span class="text-sm leading-5 font-semibold text-black max-md:hidden">Войти</span>
-          <i class="icon-login text-black text-xl leading-5"></i>
+          <i class="icon-login text-black text-xl leading-5 max-lg:text-xl max-lg:leading-5"></i>
         </button>
 
         <!-- Login wrapper -->
-        <div class="login-wrapper opacity-0 invisible">
-          <div class="login-background fixed inset-0 w-screen h-screen bg-black/50 z-40"></div>
+        <div class="login-wrapper">
 
           <!-- Login content -->
-          <div
-            class="login-content z-50 fixed w-96 h-auto bg-white p-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg">
-            <div class="flex justify-between items-center mb-2">
-              <h4 class="text-2xl text-black font-bold leadeing-130">Добро пожаловать!</h4>
+          <div class="login-content invisible opacity-0">
+            <div
+              class="z-50 fixed w-96 h-auto bg-white p-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg">
+              <div class="flex justify-between items-center mb-2">
+                <h4 class="text-2xl text-black font-bold leadeing-130">
+                  Добро пожаловать!
+                </h4>
 
-              <!-- close icon -->
-              <i class="login-close icon-close cursor-pointer text-2xl leading-6"></i>
-            </div>
-            <div class="">
-              <span class="text-grey-100 text-sm font-medium leading-130">Войти в систему чтобы торговать в
-                системе</span>
-              <form class="mt-7 flex flex-col">
-
-                <!-- form group -->
-                <div class="form-group flex flex-col gap-2 mb-4">
-                  <label for="login-label" class="text-grey-300 text-sm leading-5 font-medium">Логин</label>
-                  <input type="text" id="login-label" class="bg-grey rounded-lg p-3 text-sm outline-1 outline-blue-300"
-                    placeholder="Введите логин">
-                </div>
-
-                <!-- form group -->
-                <div class="form-group flex flex-col gap-2 mb-2">
-                  <label for="password-label" class="text-grey-300 text-sm leading-5 font-medium">Пароль</label>
-                  <div class="relative w-full">
-                    <input type="password" id="password-label"
-                      class="bg-grey rounded-lg p-3 pr-10 text-sm outline-1 outline-blue-300 w-full" placeholder="Введите пароль">
-                    <i class="icon-eye-closed absolute top-[10px] right-[10px] text-2xl text-grey-100 cursor-pointer"></i>
-                  </div>
-                </div>
-
-                <!-- forgot password link -->
-                <a href="#" class="text-blue text-xs leading-130 font-normal">Забыли пароль?</a>
-
-                <div class="login-content__buttons mt-16">
-                  <!-- submit button -->
-                  <button type="submit"
-                    class="bg-blue text-base font-semibold leading-130 text-white rounded-lg block w-full py-3 border border-white hover:bg-white hover:text-blue hover:border-blue transition-300">Войти</button>
-                  <div class="flex items-center gap-1 my-3 justify-center">
-                    <div class="line w-20 h-[1px] bg-grey-50"></div>
-                    <span class="text-xs text-grey-100 leading-130 font-normal">Хотите стать продавцом?</span>
-                    <div class="line w-20 h-[1px] bg-grey-50"></div>
+                <!-- close icon -->
+                <i class="login-close icon-close cursor-pointer text-2xl leading-6"></i>
+              </div>
+              <div class="">
+                <span class="text-grey-100 text-sm font-medium leading-130">Войти в систему чтобы торговать в
+                  системе</span>
+                <form class="mt-7 flex flex-col">
+                  <!-- form group -->
+                  <div class="form-group flex flex-col gap-2 mb-4">
+                    <label for="login-label" class="text-grey-300 text-sm leading-5 font-medium">Логин</label>
+                    <input type="text" id="login-label"
+                      class="bg-grey rounded-lg p-3 text-sm outline-1 outline-blue-300" placeholder="Введите логин" />
                   </div>
 
-                  <!-- Bid button -->
-                  <button type="button"
-                    class="bg-white text-base font-semibold leading-130 text-blue rounded-lg block w-full py-2 border border-blue hover:bg-blue hover:text-white transition-300">Подать
-                    заявку</button>
-                </div>
-              </form>
+                  <!-- form group -->
+                  <div class="form-group flex flex-col gap-2 mb-2">
+                    <label for="password-label" class="text-grey-300 text-sm leading-5 font-medium">Пароль</label>
+                    <div class="relative w-full">
+                      <input type="password" id="password-label"
+                        class="bg-grey rounded-lg p-3 pr-10 text-sm outline-1 outline-blue-300 w-full"
+                        placeholder="Введите пароль" />
+                      <i
+                        class="icon-eye-closed absolute top-[10px] right-[10px] text-2xl text-grey-100 cursor-pointer"></i>
+                    </div>
+                  </div>
+
+                  <!-- forgot password link -->
+                  <a href="#" class="text-blue text-xs leading-130 font-normal">Забыли пароль?</a>
+
+                  <div class="login-content__buttons mt-16">
+                    <!-- submit button -->
+                    <button type="submit"
+                      class="bg-blue text-base font-semibold leading-130 text-white rounded-lg block w-full py-3 border border-white hover:bg-white hover:text-blue hover:border-blue transition-300">
+                      Войти
+                    </button>
+                    <div class="flex items-center gap-1 my-3 justify-center">
+                      <div class="line w-20 h-[1px] bg-grey-50"></div>
+                      <span class="text-xs text-grey-100 leading-130 font-normal">Хотите стать продавцом?</span>
+                      <div class="line w-20 h-[1px] bg-grey-50"></div>
+                    </div>
+
+                    <!-- Bid button -->
+                    <button type="button"
+                      class="bg-white text-base font-semibold leading-130 text-blue rounded-lg block w-full py-2 border border-blue hover:bg-blue hover:text-white transition-300">
+                      Подать заявку
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Catecory section -->
+    <!-- Category section -->
     <section class="categories bg-white mx-[30px] mt-[89px] mb-[62px] pt-[54px] pb-[25px]">
       <div class="container mx-auto max-w-[1184px] justify-center">
         <form
-          class="z-30 w-1/2 max-md:inset-x-5 max-xl:inset-x-[25%] max-lg:inset-x-[20%] relative px-2.5 rounded-lg -top-20 inset-x-[30%] border border-gray-200 bg-white flex items-center justify-between">
+          class="z-30 w-1/2 relative px-2.5 rounded-lg -top-20 border left-[30%] border-gray-200 bg-white flex items-center justify-between">
           <div class="flex items-center grow relative z-30">
             <div class="flex items-center gap-2 grow">
               <i class="icon-search text-[#D5D8DB]"></i>
@@ -138,12 +148,11 @@
 
           <!-- search dropdown -->
           <div class="dropdown-wrapper opacity-0 invisible">
-            <div class="dropdown-background fixed inset-0 w-screen h-screen bg-black/50 z-10"></div>
             <div class="absolute top-14 z-30 left-0 bg-white w-full p-4 pb-0 rounded-lg">
-              <p class="search-dropdown__header text-[#8E9297] text-sm pb-4">История поиска</p>
-              <ul class="search_dropdown__list">
-
-              </ul>
+              <p class="search-dropdown__header text-[#8E9297] text-sm pb-4">
+                История поиска
+              </p>
+              <ul class="search_dropdown__list"></ul>
             </div>
           </div>
         </form>
@@ -179,7 +188,6 @@
         <i class="icon-double-down text-lg leading-5 font-bold"></i>
       </button>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -215,7 +223,10 @@
     </div>
     <div class="w-full border-t-2 max-xl:px-[30px]">
       <div class="flex justify-between items-center py-3.5 container max-w-[1184px] mx-auto">
-        <p>© <a href="https://77.uz">77.uz</a> <span class="currentYear"></span>. Все права защищены</p>
+        <p>
+          © <a href="https://77.uz">77.uz</a>
+          <span class="currentYear"></span>. Все права защищены
+        </p>
         <div class="flex gap-x-2">
           <i class="icon-uic"></i>
           <img src="/images/icons/uic-group.svg" alt="logo" />
